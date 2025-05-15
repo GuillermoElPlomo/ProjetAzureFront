@@ -1,16 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <script defer src="app.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <title>Todo App</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tasks</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
-<body class="p-6 font-sans">
-  <h1 class="text-xl font-bold mb-4">Todo List</h1>
-  <input id="todoInput" class="border p-2" placeholder="Nouvelle tâche..." />
-  <button id="addBtn" class="ml-2 bg-blue-500 text-white p-2">Ajouter</button>
-  <ul id="todoList" class="mt-4 space-y-2"></ul>
+<body>
+  <div class="container">
+    <div class="app-container">
+      <header>
+        <div class="logo">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 6L8 16L4 12" stroke="#007AFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h1>Tasks</h1>
+        <p class="subtitle">Simplifiez votre journée</p>
+      </header>
+      
+      <div class="glass-card">
+        <div class="input-group">
+          <input type="text" id="todoInput" placeholder="Ajouter une tâche..." autocomplete="off">
+          <button id="addBtn" aria-label="Ajouter une tâche">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7 1V13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M1 7H13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <div class="todo-container">
+          <ul id="todoList"></ul>
+          <div id="emptyState" class="empty-state">
+            <div class="empty-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 11L12 14L20 6" stroke="#CCCCCC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M20 12V18C20 19.1046 19.1046 20 18 20H6C4.89543 20 4 19.1046 4 18V6C4 4.89543 4.89543 4 6 4H16" stroke="#CCCCCC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <p>Aucune tâche pour le moment</p>
+            <span>Ajoutez votre première tâche</span>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <p>Conçu avec simplicité</p>
+      </footer>
+    </div>
+  </div>
+  
+  <script src="app.js"></script>
 </body>
 </html>
