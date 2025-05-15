@@ -1,4 +1,4 @@
-const API_URL = 'https://<TON_BACKEND_URL>/api/todos';
+const API_URL = 'https://projetazureback-dcb5hchha5aua9ec.francecentral-01.azurewebsites.net/api/todos';
 
 const input = document.getElementById('todoInput');
 const list = document.getElementById('todoList');
