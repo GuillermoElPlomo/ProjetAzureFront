@@ -1,4 +1,4 @@
-const API_URL = "https://api.projet-azure.theed.fr"
+const API_URL = "https://api.projet-azure.theed.fr/api/todos"
 
 const input = document.getElementById("todoInput")
 const list = document.getElementById("todoList")
